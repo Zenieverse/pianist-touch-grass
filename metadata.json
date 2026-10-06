@@ -1,6 +1,6 @@
 {
-  "name": "Dr. T",
-  "description": "Autonomous AI & Health Intelligence Platform featuring Dr. T Cinema, Trib-House Living Library Commons, and x402 Pay-Per-Request Service on Algorand MainNet with GoPlausible Facilitator, Bazaar Discovery, and Global x402 Challenge qualification.",
-  "requestFramePermissions": ["camera", "microphone"],
+  "name": "PIANIST — Touch Grass",
+  "description": "Hear the world. Find the music. Play it. Learn piano. Become a musician. An open-source outdoor sensory music education platform powered by Gemma.",
+  "requestFramePermissions": ["microphone"],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

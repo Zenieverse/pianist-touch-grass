@@ -345,6 +345,10 @@ export function App() {
           <PianistApp />
         )}
 
+        {activeTab === 'touchgrass' && (
+          <PianistApp initialSubTab="touch-grass" />
+        )}
+
         {activeTab === 'readit' && (
           <DrTReadItApp />
         )}

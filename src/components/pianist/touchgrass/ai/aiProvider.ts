@@ -70,7 +70,7 @@ export class GemmaLocalProvider implements AIProvider {
     if (desc.includes('bird') || desc.includes('chirp') || desc.includes('whistle')) {
       return {
         sound_type: 'avian_melodic_contour',
-        source_category: 'Birdsong / Wildlife',
+        source_category: 'Birdsong / Avian Contour',
         pulse_detected: false,
         tempo_estimate: 112,
         pattern: 'tripartite rising-falling flutter',
@@ -88,6 +88,106 @@ export class GemmaLocalProvider implements AIProvider {
           instructions: 'Start on G4 (Treble landmark), drop a minor 3rd to E4, then flutter back up to G4 and resolve softly on A4.'
         },
         coach_tip: 'Play with light fingertips, letting the keys rebound quickly like feathers.',
+        model_provider_name: 'Gemma Local Heuristic Engine'
+      };
+    }
+
+    if (desc.includes('bicycle') || desc.includes('bike') || desc.includes('wheel')) {
+      return {
+        sound_type: 'mechanical_wheel_rotation',
+        source_category: 'Bicycle Wheels / Mechanical',
+        pulse_detected: true,
+        tempo_estimate: features.detectedTempoBpm || 120,
+        pattern: 'rapid freewheel click-click cadence',
+        melodic_contour: 'static',
+        confidence: 0.93,
+        recommended_skill: 'rhythm',
+        pedagogy_explanation: 'A spinning bicycle freewheel generates high-frequency sixteenth-note subdivisions. This is the classic groove pattern behind lively Allegro piano movements.',
+        exercise: {
+          title: 'Spinning Wheel 16th-Note Pulse',
+          type: 'piano_rhythm',
+          difficulty: 2,
+          keySignature: 'G Major',
+          targetNotes: ['D4', 'G4', 'B4', 'D5'],
+          suggestedHand: 'RH',
+          instructions: 'Play rapid, crisp repeated eighth/sixteenth pulses on G4 and B4, anchoring your wrist and using light finger-action.'
+        },
+        coach_tip: 'Keep your forearm completely still. The energy comes from the knuckles.',
+        model_provider_name: 'Gemma Local Heuristic Engine'
+      };
+    }
+
+    if (desc.includes('construction') || desc.includes('hammer') || desc.includes('machinery') || desc.includes('engine')) {
+      return {
+        sound_type: 'industrial_percussive_thrust',
+        source_category: 'Construction / Heavy Machinery',
+        pulse_detected: true,
+        tempo_estimate: features.detectedTempoBpm || 76,
+        pattern: 'heavy downbeat strike with metallic resonance',
+        melodic_contour: 'falling',
+        confidence: 0.90,
+        recommended_skill: 'harmony',
+        pedagogy_explanation: 'Construction impacts deliver heavy accentuation on beat 1. In Russian romantic and modern piano works (Prokofiev, Bartók), percussive piano strokes evoke raw industrial power.',
+        exercise: {
+          title: 'Industrial Heavy Downbeat Accent',
+          type: 'ostinato_accompaniment',
+          difficulty: 2,
+          keySignature: 'A Minor',
+          targetNotes: ['A2', 'E3', 'A3', 'C4'],
+          suggestedHand: 'LH',
+          instructions: 'Strike low A2/E3 octaves with solid weight on count 1, then rest on counts 2 and 3 like a heavy machine cycle.'
+        },
+        coach_tip: 'Use full arm drop from the shoulder into the keyboard bed without tensing your wrists.',
+        model_provider_name: 'Gemma Local Heuristic Engine'
+      };
+    }
+
+    if (desc.includes('signal') || desc.includes('traffic') || desc.includes('beep') || desc.includes('cross')) {
+      return {
+        sound_type: 'metronomic_pedestrian_chime',
+        source_category: 'Traffic Signals / Pedestrian Crossing',
+        pulse_detected: true,
+        tempo_estimate: features.detectedTempoBpm || 108,
+        pattern: 'isochronous metronomic pulse',
+        melodic_contour: 'static',
+        confidence: 0.95,
+        recommended_skill: 'rhythm',
+        pedagogy_explanation: 'Pedestrian crossing signals provide an exact acoustic metronome. Practicing with an unyielding external pulse builds rock-solid internal timing.',
+        exercise: {
+          title: 'Pedestrian Signal Metronome Lock',
+          type: 'piano_rhythm',
+          difficulty: 1,
+          keySignature: 'C Major',
+          targetNotes: ['C4', 'C4', 'G4', 'G4'],
+          suggestedHand: 'RH',
+          instructions: 'Lock into the steady 108 BPM pulse. Play four repeated quarter notes without rushing or dragging.'
+        },
+        coach_tip: 'Breathe evenly on beats 1 and 3 to anchor your nervous system.',
+        model_provider_name: 'Gemma Local Heuristic Engine'
+      };
+    }
+
+    if (desc.includes('door') || desc.includes('latch') || desc.includes('click') || desc.includes('hinge')) {
+      return {
+        sound_type: 'acoustic_closure_cadence',
+        source_category: 'Doors / Latches & Hinges',
+        pulse_detected: true,
+        tempo_estimate: features.detectedTempoBpm || 60,
+        pattern: 'anticipation swing followed by crisp snap',
+        melodic_contour: 'falling',
+        confidence: 0.87,
+        recommended_skill: 'harmony',
+        pedagogy_explanation: 'A latch closing represents a musical cadence: tension (the swing) resolving into closure (the strike). In harmony, this mirrors a V7 to I resolution.',
+        exercise: {
+          title: 'Door Latch Harmonic Resolution',
+          type: 'harmony' as any,
+          difficulty: 1,
+          keySignature: 'C Major',
+          targetNotes: ['G3', 'B3', 'F4', 'C4'],
+          suggestedHand: 'Both',
+          instructions: 'Play tension chord (G-B-F) then firmly resolve into stable home chord (C-E-G).'
+        },
+        coach_tip: 'Feel the sense of arrival when the C major chord settles.',
         model_provider_name: 'Gemma Local Heuristic Engine'
       };
     }
@@ -120,7 +220,7 @@ export class GemmaLocalProvider implements AIProvider {
     // Default General Environmental Discovery
     return {
       sound_type: 'ambient_urban_pulse',
-      source_category: 'Traffic / Transit',
+      source_category: 'Traffic Signals / Pedestrian Crossing',
       pulse_detected: features.pulseDetected,
       tempo_estimate: features.detectedTempoBpm || 90,
       pattern: features.rhythmicPattern || 'steady pulse with syncopated echoes',

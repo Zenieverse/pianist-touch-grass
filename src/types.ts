@@ -5,6 +5,7 @@
 export type NavTab = 
   | 'drt'
   | 'pianist'
+  | 'touchgrass'
   | 'cinema'
   | 'tribhouse'
   | 'readit'

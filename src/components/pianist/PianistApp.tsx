@@ -48,8 +48,19 @@ import {
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
-export const PianistApp: React.FC = () => {
-  const [activeSubTab, setActiveSubTab] = useState<PianistSubTab>('home');
+export interface PianistAppProps {
+  initialSubTab?: PianistSubTab;
+}
+
+export const PianistApp: React.FC<PianistAppProps> = ({ initialSubTab = 'home' }) => {
+  const [activeSubTab, setActiveSubTab] = useState<PianistSubTab>(initialSubTab);
+
+  useEffect(() => {
+    if (initialSubTab) {
+      setActiveSubTab(initialSubTab);
+    }
+  }, [initialSubTab]);
+
   const [profile, setProfile] = useState<PianistProfile>(() => {
     const saved = localStorage.getItem('pianist_profile_v1');
     if (saved) {

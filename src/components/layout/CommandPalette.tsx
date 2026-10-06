@@ -33,7 +33,10 @@ import {
   Presentation,
   Piano,
   Music,
-  Headphones
+  Headphones,
+  Compass,
+  MapPin,
+  EyeOff
 } from 'lucide-react';
 
 interface CommandPaletteProps {
@@ -72,8 +75,48 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({
 
   const commands = [
     {
-      category: '🎹 PIANIST (The Complete Piano Learning Platform)',
+      category: '🎹 PIANIST & 🌿 Touch Grass (Outdoor Music Discovery)',
       items: [
+        {
+          label: 'PIANIST — Touch Grass: 60-Second Music Walk (Outdoor Signature Demo)',
+          icon: <Compass className="w-4 h-4 text-emerald-400" />,
+          action: () => {
+            setActiveTab('touchgrass');
+            onClose();
+          }
+        },
+        {
+          label: 'Touch Grass: Outdoor Rhythm Hunt (Footsteps, Rain, Traffic, Bells)',
+          icon: <Clock className="w-4 h-4 text-emerald-300" />,
+          action: () => {
+            setActiveTab('touchgrass');
+            onClose();
+          }
+        },
+        {
+          label: 'Touch Grass: Melody Hunt & Avian Contour Reproduction',
+          icon: <Headphones className="w-4 h-4 text-teal-400" />,
+          action: () => {
+            setActiveTab('touchgrass');
+            onClose();
+          }
+        },
+        {
+          label: 'Touch Grass: Acoustic Sound Map Radar (No-GPS Coarse Plotter)',
+          icon: <MapPin className="w-4 h-4 text-amber-400" />,
+          action: () => {
+            setActiveTab('touchgrass');
+            onClose();
+          }
+        },
+        {
+          label: 'Touch Grass: 60-Second Silence Mission (Active Listening Training)',
+          icon: <EyeOff className="w-4 h-4 text-purple-400" />,
+          action: () => {
+            setActiveTab('touchgrass');
+            onClose();
+          }
+        },
         {
           label: 'PIANIST: Today\'s Practice Mission & Adaptive Routine',
           icon: <Piano className="w-4 h-4 text-teal-400" />,

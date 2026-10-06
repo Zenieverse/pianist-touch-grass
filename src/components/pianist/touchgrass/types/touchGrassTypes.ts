@@ -12,13 +12,17 @@ export type OutdoorMissionType =
 
 export type SoundSourceCategory = 
   | 'Footsteps / Walking'
-  | 'Birdsong / Wildlife'
+  | 'Bicycle Wheels / Mechanical'
   | 'Rain / Water Flow'
-  | 'Traffic / Transit'
-  | 'Wind / Rustling Leaves'
-  | 'Mechanical / Construction'
+  | 'Construction / Heavy Machinery'
+  | 'Traffic Signals / Pedestrian Crossing'
+  | 'Doors / Latches & Hinges'
+  | 'Birdsong / Avian Contour'
+  | 'Water / Streams & Faucets'
+  | 'Machinery / Motors & Engines'
   | 'Human Voices / Distant Murmur'
-  | 'Bicycle / Wheels';
+  | 'Wind / Rustling Foliage'
+  | 'Bells & Whistles / Chimes';
 
 export interface ExtractedAudioFeatures {
   durationSeconds: number;

@@ -2,7 +2,7 @@
 
 > **Hear the world. Find the music. Play it.**
 
-An open-source AI music-learning platform that transforms real-world outdoor sounds into piano learning missions, melodic contours, and rhythmic exercises powered by **Gemma**.
+An open-source AI music-learning platform that transforms real-world outdoor sounds into piano learning missions, melodic contours, and rhythmic exercises with an extensible AI reasoning architecture and Gemma model bridge.
 
 ---
 
@@ -23,7 +23,7 @@ The screen is the shortest part of the experience. Learners physically step away
 ## 🎯 Target Repository
 - **GitHub Repository**: [`Zenieverse/pianist-touch-grass`](https://github.com/Zenieverse/pianist-touch-grass)
 - **License**: MIT
-- **Architecture**: Web Audio API Physical Modeling Synthesizer + Gemma Open AI Reasoning Layer + React 18 + Tailwind CSS
+- **Architecture**: Web Audio API Physical Modeling Synthesizer + AI Reasoning Layer (Local Heuristic & Gemma Cloud Bridge) + React 18 + Tailwind CSS
 
 ---
 
@@ -38,9 +38,9 @@ The screen is the shortest part of the experience. Learners physically step away
    - Performance evaluation on the live keyboard.
    - *"You heard it. Now play it. You didn't memorize this. You discovered it."*
 
-2. **Gemma Open AI Reasoning Layer**
+2. **AI Reasoning Layer (Local Heuristic & Gemma Cloud Bridge)**
    - Abstraction interface (`AIProvider`) with zero vendor lock-in.
-   - **Gemma Local Provider**: Deterministic on-device edge reasoning with full JSON schema compliance.
+   - **Local Heuristic Provider (Default)**: 100% offline deterministic music reasoning (zero neural weights) with full schema compliance.
    - **Gemma Cloud Provider**: Configurable integration with hosted Gemma models (`gemma-2-9b-it`, `gemma-2-27b-it`, Ollama, vLLM).
    - Generates structured JSON describing sound classification, pulse detection, estimated BPM, melodic contours, and pedagogical exercises.
 

@@ -41,7 +41,7 @@ The screen is the shortest part of the experience. Learners physically step away
 2. **AI Reasoning Layer (Local Heuristic & Gemma Cloud Bridge)**
    - Abstraction interface (`AIProvider`) with zero vendor lock-in.
    - **Local Heuristic Provider (Default)**: 100% offline deterministic music reasoning (zero neural weights) with full schema compliance.
-   - **Gemma Cloud Provider**: Configurable integration with hosted Gemma models (`gemma-2-9b-it`, `gemma-2-27b-it`, Ollama, vLLM).
+   - **Gemma Cloud Provider**: Configurable integration with native hosted Gemma 4 models (`gemma-4-31b-it` / `gemma-4-26b-a4b-it`) via the Google GenAI SDK.
    - Generates structured JSON describing sound classification, pulse detection, estimated BPM, melodic contours, and pedagogical exercises.
 
 3. **100% Client-Side Audio Privacy**
